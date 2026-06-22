@@ -50,3 +50,17 @@ public class LinkedListTraversalTest {
         System.out.println("-----------------------------------------");
     }
 }
+
+// When I ran the program, the list containing 50,000 integers, the iterator traversal completed in around 7.38 million nanoseconds.
+// The get(index) traversal required around 861 million nanoseconds.
+// Which means that the get(index) approach took 854 million nanoseconds longer to finish.
+// Running the 500,000 integer list, the Iterator traversal completed in around 6.90 million nanoseconds.
+// The get(index) traversal completed in 241.9 billion nanoseconds.
+// Making the difference around 241.9 billion nanoseconds.
+// This shows there was a dramatic increase in execution time.
+// The LinkedList stored the data in nodes that are connected together.
+// The Iterator has the program move from one node to the next, resulting in O(n) time complexity for traversing the entire list.
+// But, when using get(index), the LinkedList must start at the beginning or end of the list and move through nodes to find the requested index.
+// This process repeats for every element results in O(n2) time complexity.
+// These results show that Iterator traversal is more efficient for LinkedLists, especially as the size of the list increases.
+// Both methods did work correctly, but the performance gap is noticeable with larger datasets.
